@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bellas Cafe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">☕ Bellas</div>
+    <ul id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#food">Menu</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button onclick="toggleMenu()">☰</button>
+  </nav>
+
+  <!-- HOME -->
+  <section class="hero" id="home">
+    <h1>Bellas</h1>
+    <p>Where every sip tells a story.</p>
+    <h2 ><b>LOCATION : </b>greater kelash, near rk palace, jammu</h2>
+    <br>
+    <a href="#food" class="btn">See Our Menu</a>
+  </section>
+
+  <!-- MENU -->
+  <section id="food">
+    <h2>Our Menu</h2>
+    <p class="sub">Crafted with love, served with warmth</p>
+
+    <div class="tabs">
+      <button class="tab active" onclick="showTab('coffee', this)">Coffee</button>
+      <button class="tab" onclick="showTab('snacks', this)">Snacks</button>
+      <button class="tab" onclick="showTab('desserts', this)">Desserts</button>
+    </div>
+
+    <div class="grid" id="coffee">
+      <div class="card">☕<h3>Espresso</h3><p>Bold single shot.</p><span>120 rupees</span></div>
+      <div class="card">🥛<h3>Cappuccino</h3><p>Espresso with milk foam.</p><span>250 rupees</span></div>
+      <div class="card">🍵<h3>Latte</h3><p>Creamy steamed milk.</p><span>240 rupees</span></div>
+      <div class="card">🧊<h3>Iced Mocha</h3><p>Chilled coffee & chocolate.</p><span>260 rupees</span></div>
+    </div>
+
+    <div class="grid hide" id="snacks">
+      <div class="card">🥐<h3>Croissant</h3><p>Flaky, freshly baked.</p><span>180 rupees</span></div>
+      <div class="card">🥪<h3>Club Sandwich</h3><p>Chicken, lettuce & tomato.</p><span>300 rupees</span></div>
+      <div class="card">🧀<h3>Cheese Toast</h3><p>Sourdough & melted cheese.</p><span>200 rupees</span></div>
+      <div class="card">🥑<h3>Avocado Toast</h3><p>Multigrain with egg.</p><span>350 rupees</span></div>
+    </div>
+
+    <div class="grid hide" id="desserts">
+      <div class="card">🎂<h3>Tiramisu</h3><p>Classic Italian dessert.</p><span>300 rupees</span></div>
+      <div class="card">🍰<h3>Cheesecake</h3><p>Creamy with berry compote.</p><span>280 rupees</span></div>
+      <div class="card">🧁<h3>Red Velvet</h3><p>Cupcake with cream frosting.</p><span>180 rupees</span></div>
+      <div class="card">🍫<h3>Brownie</h3><p>Warm fudgy with ice cream.</p><span>250 rupees</span></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&q=80" alt="Bellas Cafe" />
+    <div>
+      <h2>Our Story</h2>
+      <p>Bellas was born in 2018 from a simple dream — a cozy corner where great coffee meets warm company. Founded by Isabella Rossi, every item is made from locally sourced ingredients.</p>
+      <p>Come as a stranger, leave as family. That's the Bellas promise. 🤍</p>
+      <div class="stats">
+        <div><strong>6+</strong><p>Years Open</p></div>
+        <div><strong>50+</strong><p>Menu Items</p></div>
+        <div><strong>10k+</strong><p>Happy Guests</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Get in Touch</h2>
+    <p class="sub">We'd love to hear from you</p>
+    <form onsubmit="validateForm(event)">
+      <input type="text" id="name" placeholder="Your Name" />
+      <small id="nameErr"></small>
+      <input type="email" id="email" placeholder="Email Address" />
+      <small id="emailErr"></small>
+      <textarea id="msg" rows="5" placeholder="Your Message"></textarea>
+      <small id="msgErr"></small>
+      <button type="submit" class="btn">Send Message</button>
+      <p id="ok" class="hide">✅ Message sent! We'll be in touch.</p>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="logo">☕ Bellas</div>
+    <div class="socials">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+    <p>&copy; 2024 Bellas Cafe. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
